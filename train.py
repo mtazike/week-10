@@ -59,6 +59,10 @@ print(df[['roast', 'roast_num']].head(5))
 X = df[['100g_USD', 'roast_num']]   # two input features
 y = df['rating']                    # target variable
 
+# Convert to numpy arrays
+X = np.array(X)
+y = np.array(y)
+
 # Create and train the Decision Tree model
 tree_model = DecisionTreeRegressor(random_state=0)
 tree_model.fit(X, y)
