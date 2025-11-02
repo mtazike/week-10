@@ -1,4 +1,6 @@
 import pandas as pd
+import numpy as np
+
 
 url = "https://raw.githubusercontent.com/leontoddjohnson/datasets/refs/heads/main/data/coffee_analysis.csv"
 df = pd.read_csv(url)
