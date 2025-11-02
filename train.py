@@ -1,5 +1,8 @@
 import pandas as pd
 import numpy as np
+import pickle
+from sklearn.linear_model import LinearRegression
+from sklearn.tree import DecisionTreeRegressor
 
 
 url = "https://raw.githubusercontent.com/leontoddjohnson/datasets/refs/heads/main/data/coffee_analysis.csv"
@@ -7,9 +10,7 @@ df = pd.read_csv(url)
 
 print(df.head())
 
-
-from sklearn.linear_model import LinearRegression
-import pickle
+# Exercise 1
 
 # Select the feature (X) and target (y)
 X = df[['100g_USD']]   # independent variable
@@ -37,8 +38,6 @@ print(f"Predicted rating for 100g_USD = 5 is: {predicted_rating[0]:.2f}")
 
 
 # Exercise 2
-
-from sklearn.tree import DecisionTreeRegressor
 
 # Create a mapping dictionary
 roast_map = {
